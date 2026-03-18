@@ -17,6 +17,7 @@ async def on_ready():
 
 @bot.command()
 async def ping(ctx):
+    await asyncio.sleep(1)
     await ctx.send("Pong!")
 
 @bot.event
