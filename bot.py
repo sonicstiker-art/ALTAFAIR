@@ -41,8 +41,10 @@ the person {member.guild.member_count}⠀‿⠀wlc *! *** ˚ ₊
         # รูปแบนเนอร์ (ใส่ลิงก์รูปเอง)
         embed.set_image(url="https://cdn.discordapp.com/attachments/1483407902323773440/1483791975911133274/ChatGPT_Image_18_.._2569_00_28_18.png?ex=69bbe076&is=69ba8ef6&hm=663b8c85c3be49a6d1c9d57c95fc1461d4807bc1338db4a8929d0a5781b981d2&")
 
-        # footer
-        embed.set_footer(text=f"สมาชิกคนที่ {member.guild.member_count}")
+        embed.set_author(
+        name=member.name,
+        icon_url=member.avatar.url if member.avatar else member.default_avatar.url
+)
 
         # ✅ ส่ง embed
         await channel.send(embed=embed)
