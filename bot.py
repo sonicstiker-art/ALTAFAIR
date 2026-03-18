@@ -41,7 +41,7 @@ async def on_member_join(member):
         )
 
         # รูปแบนเนอร์ (ใส่ลิงก์รูปเอง)
-        embed.set_image(url="https://i.imgur.com/yourimage.png")
+        embed.set_image(url="https://cdn.discordapp.com/attachments/1483407902323773440/1483791975911133274/ChatGPT_Image_18_.._2569_00_28_18.png?ex=69bbe076&is=69ba8ef6&hm=663b8c85c3be49a6d1c9d57c95fc1461d4807bc1338db4a8929d0a5781b981d2&")
 
         # footer
         embed.set_footer(text=f"สมาชิกคนที่ {member.guild.member_count}")
