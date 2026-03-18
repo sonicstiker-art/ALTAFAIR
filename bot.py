@@ -24,7 +24,7 @@ async def on_member_join(member):
 
     if channel:
         embed = discord.Embed(
-            title="🔥 WELCOME 🔥",
+            title="welcome to server",
             description=f"""
 ยินดีต้อนรับ {member.mention}
 
@@ -33,11 +33,6 @@ async def on_member_join(member):
 🎮 สนุกกับเซิร์ฟได้เลย!
 """,
             color=discord.Color.red()
-        )
-
-        # รูปโปรไฟล์
-        embed.set_thumbnail(
-            url=member.avatar.url if member.avatar else member.default_avatar.url
         )
 
         # รูปแบนเนอร์ (ใส่ลิงก์รูปเอง)
