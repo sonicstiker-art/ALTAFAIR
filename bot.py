@@ -27,10 +27,13 @@ async def on_member_join(member):
             title="welcome to server",
             description=f"""
 ยินดีต้อนรับ {member.mention}
-
-📌 อ่านกฎ: <#1483772251378683954>
-💬 แชท: <#1483772251378683954>
-🎮 สนุกกับเซิร์ฟได้เลย!
+welcome to ♪.  ALTAFAIR  ⟢₊ ˚. *!*
+⠀⯎⠀⠀*!*⠀{member.mention} ⠀﹒⠀***
+ ⠀<:RV:1447295941248942282><:02role:1447296966995218452>
+ <:churchofgod:1447295755672096819>⠀﹐⠀⠀➷⠀<:emoji_231:1447295809488945195>
+︵***⠀
+ ⠀welcome   {member.mention}   ⠀﹐⠀⠀➷⠀
+the person {member.guild.member_count}⠀‿⠀wlc *! *** ˚ ₊
 """,
             color=discord.Color.red()
         )
