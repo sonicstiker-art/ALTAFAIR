@@ -20,25 +20,34 @@ async def ping(ctx):
 
 @bot.event
 async def on_member_join(member):
-    channel = member.guild.get_channel(1483772251378683954)  # ใส่ ID ห้อง
-    if channel:
-        await channel.send(f"ยินดีต้อนรับ {member.mention} เข้าสู่เซิร์ฟเวอร์ 🎉")
+    channel = member.guild.get_channel(1483772251378683954)
 
-    embed = discord.Embed(
-        title="🔥 WELCOME 🔥",
-        description=f"""
+    if channel:
+        embed = discord.Embed(
+            title="🔥 WELCOME 🔥",
+            description=f"""
 ยินดีต้อนรับ {member.mention}
 
-📌 อ่านกฎ: <#CHANNEL_ID>
-💬 แชท: <#CHANNEL_ID>
+📌 อ่านกฎ: <#1483772251378683954>
+💬 แชท: <#1483772251378683954>
 🎮 สนุกกับเซิร์ฟได้เลย!
 """,
-        color=discord.Color.red()
-    )
+            color=discord.Color.red()
+        )
 
-    embed.set_thumbnail(url=member.avatar.url if member.avatar else member.default_avatar.url)
-    embed.set_image(url="https://i.imgur.com/yourimage.png")
-    embed.set_footer(text=f"{member.guild.name} | สมาชิกคนที่ {member.guild.member_count}")
+        # รูปโปรไฟล์
+        embed.set_thumbnail(
+            url=member.avatar.url if member.avatar else member.default_avatar.url
+        )
+
+        # รูปแบนเนอร์ (ใส่ลิงก์รูปเอง)
+        embed.set_image(url="https://i.imgur.com/yourimage.png")
+
+        # footer
+        embed.set_footer(text=f"สมาชิกคนที่ {member.guild.member_count}")
+
+        # ✅ ส่ง embed
+        await channel.send(embed=embed)
 
 server_on()
 
