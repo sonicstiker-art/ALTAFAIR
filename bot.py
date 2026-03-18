@@ -26,6 +26,7 @@ async def on_member_join(member):
     channel = member.guild.get_channel(1483772251378683954)
 
     if channel:
+        await channel.send(f"{member.mention}")
         embed = discord.Embed(
             title="welcome to server",
             description=f"""
