@@ -20,6 +20,9 @@ async def ping(ctx):
 
 @bot.event
 async def on_member_join(member):
+    
+    await asyncio.sleep(1)
+    
     channel = member.guild.get_channel(1483772251378683954)
 
     if channel:
