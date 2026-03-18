@@ -50,7 +50,6 @@ the person {member.guild.member_count}⠀‿⠀wlc *! *** ˚ ₊
 )
 
         # ✅ ส่ง embed
-        await channel.send(embed=embed)
         await channel.send(
     content=member.mention,
     embed=embed
